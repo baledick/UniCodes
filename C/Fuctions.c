@@ -10,9 +10,9 @@ int main(){
 	int N, i;
 	FILE *fp;
 	fp = fopen("data.txt", "w");	
-	printf("Dwse moy tis times twn a0, a1 ");
+	printf("Insert a0, a1 ");
 	scanf("%Le, %Le", &a0, &a1);
-	printf("Dwse mou ton arithmo twn vimatwn ");
+	printf("Give me the number of steps ");
 	scanf("%d", &N);
 	for(i=0; i<N; i++){
 		fprintf(fp, "a(%d)=%Le\n", i, a(i));
@@ -30,5 +30,5 @@ long double a(int n){
 	}
 	else if(n == 1) return a1;
 	else if(n == 0) return a0;
-	else if(n < 0) printf("Oxi");
+	else if(n < 0) printf("Nope");
 }
