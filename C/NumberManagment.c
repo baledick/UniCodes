@@ -4,14 +4,14 @@ int main(){
 	int i, j, position;
 	double n, a[1000], min, sum1, sum2;
 	i=1;
-	printf("\nDwse enan arnitiko mh mideniko arithmo: ");
-	printf("\nDwse 1 gia na vgeis");
+	printf("\nGive me a negative, non zero number: ");
+	printf("\nOr insert 1 to continue");
 	do{
 		printf("\na[%d]= ", i);
 		scanf("%lf", &n);
 		if(n<0) a[i++]=n;
-		else if(n==1) printf("Termatismos programmatos\n");
-		else printf("Den mporw na to dextw\n");
+		else if(n==1) printf("Ending Programm...\n");
+		else printf("I'm afraid I can't accept that.\n");
 	}while(n != 1);
 	
 	min=a[1];
@@ -28,7 +28,7 @@ int main(){
 		
 	}
 	printf("sum = %lf\n", sum1);
-	printf("mesi timi = %lf\n", sum2/(i-1));
+	printf("mean value = %lf\n", sum2/(i-1));
 	printf("min = %lf, stin thesi: %d\n", min, position);
 	printf("%d\n", i-1);
 	return 0;
