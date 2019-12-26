@@ -11,7 +11,7 @@ import numpy as np
 	             [0,0,0,0,-1,0,-1,4,-1],
 	             [0,0,0,0,0,-1,0,-1,4]])
 	b = np.array([[4],[-1],[-5],[-2],[2],[2],[-1],[1],[6]])
-	a = np.linalg.inv(A) # antistrofos tou A
+	a = np.linalg.inv(A) # transpose of A
 	x = np.dot(a,b)# Ax=b => x=ab
 	print(x)
 	Ax=np.dot(A,x)
