@@ -1,12 +1,12 @@
 import numpy as np
 def f(x):
-	return np.tan(x)-x/(1-x**2) #orizw tin sinartisi
+	return np.tan(x)-x/(1-x**2) 
 def df(x):
 	return (1/np.cos(x))*(1/np.cos(x))-(x*x+1)/((x*x-1)*(x*x-1))
 
 #a erwtima 1)
 
-def bisection(f,a,b,N):  #orizw tin bisection sinartisi
+def bisection(f,a,b,N):
 	if f(a)*f(b) >=0:
 		print("Can't do this chief")
 		return None
@@ -24,12 +24,10 @@ def bisection(f,a,b,N):  #orizw tin bisection sinartisi
 			print("I found it boss")
 			return c_n
 	return (a_n+b_n)/2
-approx = bisection(f,2,4,15)
-print(approx)
-input('Press Enter to continue...')
-#a erwtima 2)
+approx1 = bisection(f,2,4,15)
+print(approx1)
 
-def newt(f,df,x0,e,M): #orizw tin newtonian sinartisi
+def newt(f,df,x0,e,M): 
 	xn = x0
 	
 	for n in range(0,M):
@@ -40,9 +38,8 @@ def newt(f,df,x0,e,M): #orizw tin newtonian sinartisi
 	if df(xn) == 0:
 		print('Zero derivative. No solution found.')
 		return None
-approx = newt(f,df,3.0,1e-30,6)
-print(approx)
-input('Press Enter to end...')
+approx2 = newt(f,df,3.0,1e-30,6)
+print(approx2)
 
 
 
