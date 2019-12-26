@@ -7,13 +7,13 @@ int main()
 	
 	for(i=0; i<2; i++){
 		for(j=0; j<2; j++){
-			printf("Dwse mia timi tou pinaka ");
+			printf("Insert a value of the matrix");
 			scanf("%d", &a[i][j]);
 		}
 	}
 	for(i=0; i<2; i++){
 		for(j=0; j<2; j++){
-			printf("Dwse mia timi tou pinaka ");
+			printf("Again, please ");
 			scanf("%d", &b[i][j]);
 		}
 	}
