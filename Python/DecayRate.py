@@ -9,15 +9,19 @@ def decayrate(): #the decay rate function
     return dead
 
 ell = 0.01
-N=100
+N=1000
 nc= []
+time = []
+u=0
 
 while(N>0):
     for i in range(N):
         if decayrate():
             N=N-1
-            print(len(nc))
-        nc+=[N]
+       #     print(len(nc))
+    nc +=[N]
+    time += [u]
+    u += 1
 
-plt.plot(np.arange(0,len(nc),1),nc)
+plt.plot(time, nc)
 plt.show()
