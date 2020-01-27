@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 def f(x): return x**2 - x - 1 #orizw tin sinartisi pou prepei na ginei bisected
 def bisection(f,a,b,N):
     if f(a)*f(b) >= 0:
@@ -22,7 +24,5 @@ def bisection(f,a,b,N):
             return None
     return (a_n + b_n)/2
 
-f = lambda x: x**2 - x - 1
 approx_phi = bisection(f,1,2,25)
 print(approx_phi)
-input('Press Enter to end the program...')
