@@ -8,8 +8,8 @@ def decayrate(): #the decay rate function
         dead = True
     return dead
 
-ell = 0.9
-N=100000
+ell = 0.001
+N=10000
 nc= []
 time = []
 u=0
