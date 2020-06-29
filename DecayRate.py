@@ -18,7 +18,6 @@ while(N>0):
     for i in range(N):
         if decayrate():
             N=N-1
-       #     print(len(nc))
     nc +=[N]
     time += [u]
     u += 1
