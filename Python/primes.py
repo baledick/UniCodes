@@ -1,4 +1,4 @@
-number=input("Give me a number, and I will find all numbers before it ")
+number=input("Give me a number, and I will find all prime numbers before it ")
 n=int(number)
 for j in range(2,n):
     p=0
@@ -7,5 +7,3 @@ for j in range(2,n):
             p=1
     if p==0:
         print(j, "is prime")
-
-        
