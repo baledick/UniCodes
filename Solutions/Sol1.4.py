@@ -1,32 +1,40 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# def mass(x):
-#     density = 0
-#     volume = 0
-#     for i in range(x):
-#         x_axis = np.random.uniform(0,1)
-#         y_axis = np.random.uniform(0,1)
-#         if y_axis >= x_axis**2:
-#             volume += 1-(x_axis**2)
-#             density += (20/13)*(x_axis + y_axis)
-#         else:
-#             continue
-#     z = density*volume
-#     return z
+def first(x, y):
+    value = (20/13)*(x+y)
+    return value
+def second(x, y, z):
+    value = (12/31)*(x**2 + y*z)
+    return value
+def rand(a, b):
+    value = np.random.uniform(a, b)
+    return value
 
-incidents = 1000
+n = 100000
+n10 = 0
+n11 = 0
+n20 = 0
+n21 = 0
 
-x_axis = np.arange(0, 1, 0.0001)
-x = np.random.uniform(0,1)
-y = np.random.uniform(0,1)
-for i in range(incidents):
-    if y >= x**2:
-        density =+ (20/13)*(x + y)
-        j =+ 1
-    else:
-        continue
+for i in range(n):
+    randx1 = rand(0,1)
+    randy1 = rand(0,1)
+    randx2 = rand(0,1)
+    randy2 = rand(1,2)
+    randz2 = rand(1,2)
+    if randx1**2 <= randy1:
+        n10 += first(randx1, randy1)
+        n11 += first(randx1, randy1)**2
+    n20 += second(randx2, randy2, randz2)
+    n21 += second(randx2, randy2, randz2)**2
 
-print(j)
-plt.plot(density)
-plt.show()
+int1 = n10/n
+sigma1 = ((n11/n) - ((n10/n)**2))**0.5
+dI1 = sigma1/(n**0.5)
+int2 = n20/n
+sigma2 = ((n21/n) - ((n20/n)**2))**0.5
+dI2 = sigma2/(n**0.5)
+
+print(int1, "+/-", dI1)
+print(int2, "+/-", dI2)

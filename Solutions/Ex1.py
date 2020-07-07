@@ -7,8 +7,6 @@ def newtonian_function(x):
         x -= function(x)
     return x
 
-newtonian_function(2)
-
 root = 1.259921
 approximation = round(newtonian_function(2), 6)
 
